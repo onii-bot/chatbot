@@ -29,7 +29,7 @@ client.on('uncaughtException', (err) => {
 client.on('messageCreate', (msg) => {
     if (msg.author.bot) return;
     if (msg.guild) {
-        if (msg.content.startsWith(`<@${msg.client.user.id}>`) || msg.content.startsWith(`<@!${msg.client.user.id}>`) || msg.content.includes(`aco`)) {
+        if (msg.content.startsWith(`<@${msg.client.user.id}>`) || msg.content.startsWith(`<@!${msg.client.user.id}>`) || msg.content.toLowerCase().includes(`aco`)) {
             client.util.handleTalk(msg);
         }
     }
