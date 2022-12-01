@@ -34,7 +34,7 @@ client.on('messageCreate', async (msg) => {
         }
         if (msg.type === 'REPLY') {
             const msg1 = await msg.fetchReference();
-            if (msg1.author.id === 1047503386251120660) {
+            if (msg1.author.id == 1047503386251120660) {
                 client.util.handleTalk(msg);
             }
             else{
