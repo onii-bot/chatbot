@@ -32,6 +32,12 @@ client.on('messageCreate', (msg) => {
         if (msg.content.startsWith(`<@${msg.client.user.id}>`) || msg.content.startsWith(`<@!${msg.client.user.id}>`) || msg.content.toLowerCase().includes(`aco`)) {
             client.util.handleTalk(msg);
         }
+        if (msg.type === 'REPLY') {
+            const msg1 = await msg.fetchReference();
+            if (msg1.author.id === 1047503386251120660) {
+                client.util.handleTalk(msg);
+            }
+        }
     }
 });
 
