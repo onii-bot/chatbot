@@ -26,7 +26,7 @@ client.on('uncaughtException', (err) => {
     process.exit(1)
 });
 
-client.on('messageCreate', (msg) => {
+client.on('messageCreate', async (msg) => {
     if (msg.author.bot) return;
     if (msg.guild) {
         if (msg.content.startsWith(`<@${msg.client.user.id}>`) || msg.content.startsWith(`<@!${msg.client.user.id}>`) || msg.content.toLowerCase().includes(`aco`)) {
