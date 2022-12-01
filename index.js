@@ -37,6 +37,9 @@ client.on('messageCreate', async (msg) => {
             if (msg1.author.id === 1047503386251120660) {
                 client.util.handleTalk(msg);
             }
+            else{
+                console.log("NOT ACO")
+            }
         }
     }
 });
