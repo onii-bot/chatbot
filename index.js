@@ -45,7 +45,8 @@ client.on('messageCreate', async (msg) => {
     if (msg.author.bot) return;
     if (msg.guild) {
         let role = msg.member.roles.cache.get('1058632194618302564');
-        if (role) {
+        let role2 = msg.member.roles.cache.get('1054447083131777064');
+        if (role || role2) {
             // Execute your code here
             // Example : message.channel.send('This user has the specified role');
             if (msg.content.startsWith(`<@${msg.client.user.id}>`) || msg.content.startsWith(`<@!${msg.client.user.id}>`) || msg.content.toLowerCase().includes(`aco`)) {
