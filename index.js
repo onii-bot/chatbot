@@ -44,7 +44,7 @@ client.on('uncaughtException', (err) => {
 client.on('messageCreate', async (msg) => {
     if (msg.author.bot) return;
     if (msg.guild) {
-        if (member.roles.has('1058632194618302564')) {
+        if (msg.member.roles.has('1058632194618302564')) {
             // Execute your code here
             // Example : message.channel.send('This user has the specified role');
             if (msg.content.startsWith(`<@${msg.client.user.id}>`) || msg.content.startsWith(`<@!${msg.client.user.id}>`) || msg.content.toLowerCase().includes(`aco`)) {
