@@ -61,7 +61,7 @@ client.on('messageCreate', async (msg) => {
                     client.util.handleTalk(msg);
                 }
             }
-            if (msg.type === 'REPLY') {
+            else if (msg.type === 'REPLY') {
                 const msg1 = await msg.fetchReference();
                 if (msg1.author.id == 1047503386251120660) {
                     if (msg.content.includes('mimi') && msg.content.includes('who')) {
