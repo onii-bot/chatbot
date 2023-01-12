@@ -50,7 +50,10 @@ client.on('messageCreate', async (msg) => {
         var i = Math.floor(Math.random() * answers.length)
         msg.reply(answers[i]);
       }
-      else if (msg.content.includes('mimi')) {
+      else if (msg.content.toLowerCase().includes('who') && msg.content.toLowerCase().includes('aco')) {
+        msg.reply("I am aco, a purple cat. Ethos adopted me");
+      }      
+      else if (msg.content.toLowerCase().includes('mimi')) {
         msg.reply("Mimi has forbidded me to talk about her :pensive: ");
       }
       else {
